@@ -88,18 +88,18 @@ h1, h2, h3, .logo, .footer-logo {
 }
 
 .logo-img {
-  height: 60px; /* Increased from 40px */
+  height: 100px; /* Increased from 60px */
   width: auto;
   object-fit: contain;
   transition: var(--transition-fast);
 }
 
 .navbar.scrolled .logo-img {
-  height: 48px; /* Increased from 32px */
+  height: 70px; /* Increased from 48px */
 }
 
 .footer-logo .logo-img {
-  height: 80px; /* Increased from 50px */
+  height: 120px; /* Increased from 80px */
   margin-bottom: 1rem;
 }
 
@@ -596,7 +596,7 @@ button {
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .logo-img { height: 50px; } /* Slightly larger on mobile */
+  .logo-img { height: 80px; } /* Increased from 50px */
   .hero-title { font-size: 3rem; }
   .section-title { font-size: 2.2rem; }
   .hero-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
