@@ -83,10 +83,24 @@ h1, h2, h3, .logo, .footer-logo {
 }
 
 .logo {
-  font-size: 1.5rem;
-  letter-spacing: 0.3em;
-  font-weight: 700;
-  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: var(--transition-fast);
+}
+
+.navbar.scrolled .logo-img {
+  height: 32px;
+}
+
+.footer-logo .logo-img {
+  height: 50px;
+  margin-bottom: 1rem;
 }
 
 .nav-links {
