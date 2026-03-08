@@ -88,18 +88,18 @@ h1, h2, h3, .logo, .footer-logo {
 }
 
 .logo-img {
-  height: 40px;
+  height: 60px; /* Increased from 40px */
   width: auto;
   object-fit: contain;
   transition: var(--transition-fast);
 }
 
 .navbar.scrolled .logo-img {
-  height: 32px;
+  height: 48px; /* Increased from 32px */
 }
 
 .footer-logo .logo-img {
-  height: 50px;
+  height: 80px; /* Increased from 50px */
   margin-bottom: 1rem;
 }
 
@@ -271,7 +271,9 @@ button {
   font-size: 4.5rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  color: #ffffff; /* Fallback color */
   background: linear-gradient(to right, #fff, #aaa);
+  background-clip: text; /* Standard property */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -594,6 +596,15 @@ button {
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .hero-title { font-size: 2.8rem; }
+  .logo-img { height: 50px; } /* Slightly larger on mobile */
+  .hero-title { font-size: 3rem; }
+  .section-title { font-size: 2.2rem; }
   .hero-cta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  
+  /* Ensure visibility if animations fail or take too long */
+  .reveal-left, .reveal-right, .reveal-up, .fade-up, .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
